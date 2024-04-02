@@ -5,10 +5,6 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/java:11",
 	"features": {
-		"ghcr.io/devcontainers-contrib/features/springboot-sdkman:2": {
-		      "jdkVersion":"11",
-		      "jdkDistro":"open"
-		    },
 		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
 			"plugins": "ssh-agent npm",
 			"omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
