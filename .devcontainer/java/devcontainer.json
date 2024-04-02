@@ -3,17 +3,22 @@
 {
 	"name": "Java",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"image": "mcr.microsoft.com/devcontainers/java:1-${templateOption:imageVariant}",
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/springboot-sdkman:2": {
-      "jdkVersion":"11",
-      "jdkDistro":"open"
-    },
+		      "jdkVersion":"11",
+		      "jdkDistro":"open"
+		    },
 		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
 			"plugins": "ssh-agent npm",
 			"omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
 			"username": "root"
 		},
-		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
+		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {},
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "none",
+			"installMaven": "true",
+			"installGradle": "false"
+		}
 	}
 }
